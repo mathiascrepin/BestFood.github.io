@@ -40,3 +40,21 @@ body{
 .navbar-dark {
      background-color: #512DA8;
 }
+.carousel {
+    background:#512DA8;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-item img 
+{position: absolute;
+
+}
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}

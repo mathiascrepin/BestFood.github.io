@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
+    <!--bar de navigation fixé en haut de l'ecrant et meme si on défile la page la bare ne bouge pas -->
     <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
-        <div class="container">
+        <div class="container"> <!--div conteneur -->
+<!--bouton de navigation qui permet de caché le menu sur les ecrant de petite taille-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,6 +37,7 @@
             </div>     
         </div>      
     </nav>
+<!--option de connection  -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -52,6 +55,8 @@
         </div>
 
     </div>    
+    <!-- le jamboton permet de mettre en relief un élément spécifique
+         dans la page et la parque par une couleur différenten -->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -60,27 +65,28 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                    <img src="img/logo.png" alt="logo_site_web" class="img-fluid">
                 </div>
-                <div>
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                    data-placement="bottom" href="#reserveform">Reserve Table</a>
-                </div>
-
             </div>
         </div>
     </header>
 
     <div class="container" >
-        <div class="media">
-            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
-             <div class="media-body">
-                <h2 class="mt-0"> <span class="badge badge-danger">HOT</span>  <span class="badge badge-pill badge-secondary">$4.99</span> Uthappizza</h2>
-                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                    Italian pizza, topped with Cerignola olives, ripe vine  cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
-                </p>
-            </div>
-        </div>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3 flex-last">
+                <h3>Our Lipsmacking Culinary Creations</h3>
+             </div>
+             <div class="col-sm col-md flex-first">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
+                    <div class="media-body">
+                        <h2 class="mt-0"> <span class="badge badge-danger">HOT</span>  <span class="badge badge-pill badge-secondary">$4.99</span> Uthappizza</h2>
+                        <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and
+                            Italian pizza, topped with Cerignola olives, ripe vine  cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+                        </p>
+                    </div>
+                </div>
+            </div>  
         </div>
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
@@ -91,9 +97,9 @@
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
             </div>
         </div>  
-    <div class="media">
-        <img class="d-flex mr-3 img-thumbnail align-self-center"
-                src="img/alberto.png" alt="Alberto Somayya">
+        <div class="media">
+            <img class="d-flex mr-3 img-thumbnail align-self-center"
+            src="img/alberto.png" alt="Alberto Somayya">
         <div class="media-body">
             <h2 class="mt-0">Alberto Somayya</h2>
             <h4>Executive Chef</h4>
@@ -150,6 +156,19 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
+<script>
+    $(document).ready(function(){
+        $("#mycarousel").carousel( { interval: 2000 } );
+        $("#carousel-pause").click(function(){
+            $("#mycarousel").carousel('pause');
+        });
+        $("#carousel-play").click(function(){
+            $("#mycarousel").carousel('cycle');
+        });
+    });
+</script>
+
+
 
 </body>
 
